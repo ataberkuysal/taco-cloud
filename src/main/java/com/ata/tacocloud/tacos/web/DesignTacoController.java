@@ -1,11 +1,9 @@
 package com.ata.tacocloud.tacos.web;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import com.ata.tacocloud.tacos.Taco;
-import com.ata.tacocloud.tacos.data.JdbcIngredientRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
