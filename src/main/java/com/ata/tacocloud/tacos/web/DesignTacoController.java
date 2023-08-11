@@ -22,7 +22,7 @@ import com.ata.tacocloud.tacos.TacoOrder;
 @RequestMapping("/design")
 @SessionAttributes("tacoOrder")
 public class DesignTacoController {
-    JdbcIngredientRepository jdbcIngredientRepository;
+    private final JdbcIngredientRepository jdbcIngredientRepository;
 
     @Autowired
     public DesignTacoController (JdbcIngredientRepository jdbcIngredientRepository) {

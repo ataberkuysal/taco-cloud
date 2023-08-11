@@ -13,11 +13,11 @@ import java.util.Optional;
 @Repository
 public class JdbcIngredientRepository implements IngredientRepository {
 
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
-    @Autowired
+
     public JdbcIngredientRepository (JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = new JdbcTemplate();
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     @Override
