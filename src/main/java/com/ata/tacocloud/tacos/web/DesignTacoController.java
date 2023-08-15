@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.ata.tacocloud.tacos.Taco;
+import com.ata.tacocloud.tacos.data.IngredientRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,16 +21,16 @@ import com.ata.tacocloud.tacos.TacoOrder;
 @RequestMapping("/design")
 @SessionAttributes("tacoOrder")
 public class DesignTacoController {
-    private final JdbcIngredientRepository jdbcIngredientRepository;
 
+    private final IngredientRepository ingredientRepository;
     @Autowired
-    public DesignTacoController (JdbcIngredientRepository jdbcIngredientRepository) {
-        this.jdbcIngredientRepository = jdbcIngredientRepository;
+    public DesignTacoController (IngredientRepository  ingredientRepository) {
+        this.ingredientRepository = ingredientRepository;
     }
 
     @ModelAttribute
     public void addIngredientsToModel (Model model) {
-        Iterable<Ingredient> ingredients = jdbcIngredientRepository.findAll();
+        Iterable<Ingredient> ingredients = ingredientRepository.findAll();
         Type[] types = Ingredient.Type.values();
         for(Type type : types) {
             model.addAttribute(type.toString().toLowerCase()

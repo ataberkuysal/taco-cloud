@@ -2,18 +2,19 @@ package com.ata.tacocloud.tacos.web;
 
 
 import com.ata.tacocloud.tacos.Ingredient;
+import com.ata.tacocloud.tacos.data.IngredientRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.core.convert.converter.Converter;
 
 @Component
 public class IngredientByIdConverter implements Converter<String, Ingredient> {
-    private final JdbcIngredientRepository jdbcIngredientRepository;
+    private final IngredientRepository ingredientRepository;
 
-    public IngredientByIdConverter(JdbcIngredientRepository jdbcIngredientRepository) {
-        this.jdbcIngredientRepository = jdbcIngredientRepository;
+    public IngredientByIdConverter(IngredientRepository ingredientRepository) {
+        this.ingredientRepository = ingredientRepository;
     }
     @Override
     public Ingredient convert(String id) {
-        return jdbcIngredientRepository.findById(id).orElse(null);
+        return ingredientRepository.findById(id).orElse(null);
     }
 }
