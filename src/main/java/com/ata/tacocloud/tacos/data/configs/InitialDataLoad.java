@@ -33,7 +33,7 @@ public class InitialDataLoad {
             ingredientRepository.save(new Ingredient("SRCR", "Sour Cream", Ingredient.Type.SAUCE));
 
 
-            orderRepository.save(new TacoOrder());
+            //orderRepository.save(new TacoOrder());
 
         };
 
