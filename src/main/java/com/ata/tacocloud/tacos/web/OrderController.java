@@ -1,16 +1,13 @@
 package com.ata.tacocloud.tacos.web;
 
-import com.ata.tacocloud.tacos.TacoOrder;
-import com.ata.tacocloud.tacos.data.OrderRepository;
+import com.ata.tacocloud.tacos.data.entities.TacoOrder;
+import com.ata.tacocloud.tacos.data.repos.OrderRepository;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
-
-import java.util.ArrayList;
 
 @Slf4j
 @Controller

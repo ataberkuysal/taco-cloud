@@ -1,4 +1,4 @@
-package com.ata.tacocloud.tacos;
+package com.ata.tacocloud.tacos.data.entities;
 
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;

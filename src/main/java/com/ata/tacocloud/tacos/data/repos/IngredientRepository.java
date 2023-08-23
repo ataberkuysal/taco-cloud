@@ -1,9 +1,7 @@
-package com.ata.tacocloud.tacos.data;
+package com.ata.tacocloud.tacos.data.repos;
 
-import com.ata.tacocloud.tacos.Ingredient;
+import com.ata.tacocloud.tacos.data.entities.Ingredient;
 import org.springframework.data.repository.CrudRepository;
-
-import java.util.Optional;
 
 public interface IngredientRepository
 extends CrudRepository<Ingredient, String> {

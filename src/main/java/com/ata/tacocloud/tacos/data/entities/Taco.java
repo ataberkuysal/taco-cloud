@@ -1,4 +1,4 @@
-package com.ata.tacocloud.tacos;
+package com.ata.tacocloud.tacos.data.entities;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -7,7 +7,6 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 @Data
 public class Taco {

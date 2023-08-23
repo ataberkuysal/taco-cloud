@@ -3,8 +3,8 @@ package com.ata.tacocloud.tacos.web;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.ata.tacocloud.tacos.Taco;
-import com.ata.tacocloud.tacos.data.IngredientRepository;
+import com.ata.tacocloud.tacos.data.entities.Taco;
+import com.ata.tacocloud.tacos.data.repos.IngredientRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,9 +12,9 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import lombok.extern.slf4j.Slf4j;
-import com.ata.tacocloud.tacos.Ingredient;
-import com.ata.tacocloud.tacos.Ingredient.Type;
-import com.ata.tacocloud.tacos.TacoOrder;
+import com.ata.tacocloud.tacos.data.entities.Ingredient;
+import com.ata.tacocloud.tacos.data.entities.Ingredient.Type;
+import com.ata.tacocloud.tacos.data.entities.TacoOrder;
 
 @Slf4j
 @Controller

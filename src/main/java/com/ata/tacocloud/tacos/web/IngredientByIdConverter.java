@@ -1,8 +1,8 @@
 package com.ata.tacocloud.tacos.web;
 
 
-import com.ata.tacocloud.tacos.Ingredient;
-import com.ata.tacocloud.tacos.data.IngredientRepository;
+import com.ata.tacocloud.tacos.data.entities.Ingredient;
+import com.ata.tacocloud.tacos.data.repos.IngredientRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.core.convert.converter.Converter;
 
